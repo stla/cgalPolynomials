@@ -4,7 +4,9 @@
 
 // [[Rcpp::export]]
 void test() {
+
   CGAL::IO::set_pretty_mode(std::cout);
+
   Poly_5 x = PT_5::Shift()(Poly_5(1), 1, 0); // x_0^1
   Poly_5 y = PT_5::Shift()(Poly_5(1), 1, 1); // x_1^1
   Poly_5 z = PT_5::Shift()(Poly_5(1), 1, 2); // x_2^1
@@ -13,19 +15,21 @@ void test() {
 
   Poly_5 P = CGAL::ipower(x, 8)*CGAL::ipower(a, 2)+2*CGAL::ipower(x, 6)*CGAL::ipower(y, 2)*CGAL::ipower(a, 2)+2*CGAL::ipower(x, 6)*CGAL::ipower(y, 2)*a*b+(-2)*CGAL::ipower(x, 6)*CGAL::ipower(a, 2)*b-2*CGAL::ipower(x, 6)*CGAL::ipower(a, 2)+2*CGAL::ipower(x, 6)*a*b*CGAL::ipower(z, 2)+4*CGAL::ipower(x, 5)*y*CGAL::ipower(a, 2)*z-4*CGAL::ipower(x, 5)*y*a*b*z+CGAL::ipower(x, 4)*CGAL::ipower(y, 4)*CGAL::ipower(a, 2)+4*CGAL::ipower(x, 4)*CGAL::ipower(y, 4)*a*b+CGAL::ipower(x, 4)*CGAL::ipower(y, 4)*CGAL::ipower(b, 2)+(-4)*CGAL::ipower(x, 4)*CGAL::ipower(y, 2)*CGAL::ipower(a, 2)*b+(-2)*CGAL::ipower(x, 4)*CGAL::ipower(y, 2)*CGAL::ipower(a, 2)*CGAL::ipower(z, 2)-2*CGAL::ipower(x, 4)*CGAL::ipower(y, 2)*CGAL::ipower(a, 2)+(-2)*CGAL::ipower(x, 4)*CGAL::ipower(y, 2)*a*CGAL::ipower(b, 2)+10*CGAL::ipower(x, 4)*CGAL::ipower(y, 2)*a*b*CGAL::ipower(z, 2)-4*CGAL::ipower(x, 4)*CGAL::ipower(y, 2)*a*b-2*CGAL::ipower(x, 4)*CGAL::ipower(y, 2)*CGAL::ipower(b, 2)*CGAL::ipower(z, 2)+CGAL::ipower(x, 4)*CGAL::ipower(a, 2)*CGAL::ipower(b, 2)-2*CGAL::ipower(x, 4)*CGAL::ipower(a, 2)*b+CGAL::ipower(x, 4)*CGAL::ipower(a, 2)+(-2)*CGAL::ipower(x, 4)*a*CGAL::ipower(b, 2)*CGAL::ipower(z, 2)+2*CGAL::ipower(x, 4)*a*b*CGAL::ipower(z, 2)+CGAL::ipower(x, 4)*CGAL::ipower(b, 2)*CGAL::ipower(z, 4)+4*CGAL::ipower(x, 3)*CGAL::ipower(y, 3)*CGAL::ipower(a, 2)*z-4*CGAL::ipower(x, 3)*CGAL::ipower(y, 3)*CGAL::ipower(b, 2)*z+4*CGAL::ipower(x, 3)*y*CGAL::ipower(a, 2)*b*z-4*CGAL::ipower(x, 3)*y*CGAL::ipower(a, 2)*z+(-4)*CGAL::ipower(x, 3)*y*a*CGAL::ipower(b, 2)*z+(-4)*CGAL::ipower(x, 3)*y*a*b*CGAL::ipower(z, 3)+4*CGAL::ipower(x, 3)*y*a*b*z+4*CGAL::ipower(x, 3)*y*CGAL::ipower(b, 2)*CGAL::ipower(z, 3)+2*CGAL::ipower(x, 2)*CGAL::ipower(y, 6)*a*b+2*CGAL::ipower(x, 2)*CGAL::ipower(y, 6)*CGAL::ipower(b, 2)+(-2)*CGAL::ipower(x, 2)*CGAL::ipower(y, 4)*CGAL::ipower(a, 2)*b-2*CGAL::ipower(x, 2)*CGAL::ipower(y, 4)*CGAL::ipower(a, 2)*CGAL::ipower(z, 2)+(-4)*CGAL::ipower(x, 2)*CGAL::ipower(y, 4)*a*CGAL::ipower(b, 2)+10*CGAL::ipower(x, 2)*CGAL::ipower(y, 4)*a*b*CGAL::ipower(z, 2)-4*CGAL::ipower(x, 2)*CGAL::ipower(y, 4)*a*b+(-2)*CGAL::ipower(x, 2)*CGAL::ipower(y, 4)*CGAL::ipower(b, 2)*CGAL::ipower(z, 2)-2*CGAL::ipower(x, 2)*CGAL::ipower(y, 4)*CGAL::ipower(b, 2)+2*CGAL::ipower(x, 2)*CGAL::ipower(y, 2)*CGAL::ipower(a, 2)*CGAL::ipower(b, 2)+(-2)*CGAL::ipower(x, 2)*CGAL::ipower(y, 2)*CGAL::ipower(a, 2)*b*CGAL::ipower(z, 2)-2*CGAL::ipower(x, 2)*CGAL::ipower(y, 2)*CGAL::ipower(a, 2)*b+6*CGAL::ipower(x, 2)*CGAL::ipower(y, 2)*CGAL::ipower(a, 2)*CGAL::ipower(z, 2)+(-2)*CGAL::ipower(x, 2)*CGAL::ipower(y, 2)*a*CGAL::ipower(b, 2)*CGAL::ipower(z, 2)-2*CGAL::ipower(x, 2)*CGAL::ipower(y, 2)*a*CGAL::ipower(b, 2)+2*CGAL::ipower(x, 2)*CGAL::ipower(y, 2)*a*b*CGAL::ipower(z, 4)-8*CGAL::ipower(x, 2)*CGAL::ipower(y, 2)*a*b*CGAL::ipower(z, 2)+2*CGAL::ipower(x, 2)*CGAL::ipower(y, 2)*a*b+6*CGAL::ipower(x, 2)*CGAL::ipower(y, 2)*CGAL::ipower(b, 2)*CGAL::ipower(z, 2)+4*x*CGAL::ipower(y, 5)*a*b*z-4*x*CGAL::ipower(y, 5)*CGAL::ipower(b, 2)*z+4*x*CGAL::ipower(y, 3)*CGAL::ipower(a, 2)*b*z-4*x*CGAL::ipower(y, 3)*CGAL::ipower(a, 2)*CGAL::ipower(z, 3)+(-4)*x*CGAL::ipower(y, 3)*a*CGAL::ipower(b, 2)*z+4*x*CGAL::ipower(y, 3)*a*b*CGAL::ipower(z, 3)-4*x*CGAL::ipower(y, 3)*a*b*z+4*x*CGAL::ipower(y, 3)*CGAL::ipower(b, 2)*z+CGAL::ipower(y, 8)*CGAL::ipower(b, 2)+(-2)*CGAL::ipower(y, 6)*a*CGAL::ipower(b, 2)+2*CGAL::ipower(y, 6)*a*b*CGAL::ipower(z, 2)-2*CGAL::ipower(y, 6)*CGAL::ipower(b, 2)+CGAL::ipower(y, 4)*CGAL::ipower(a, 2)*CGAL::ipower(b, 2)-2*CGAL::ipower(y, 4)*CGAL::ipower(a, 2)*b*CGAL::ipower(z, 2)+CGAL::ipower(y, 4)*CGAL::ipower(a, 2)*CGAL::ipower(z, 4)+(-2)*CGAL::ipower(y, 4)*a*CGAL::ipower(b, 2)+2*CGAL::ipower(y, 4)*a*b*CGAL::ipower(z, 2)+CGAL::ipower(y, 4)*CGAL::ipower(b, 2);
 
-  std::list<std::pair<CGAL::Exponent_vector, PT_5::Innermost_coefficient_type>> monoms;
-  PT_5::Monomial_representation mrepr(P, std::back_inserter(monoms));
+  std::list<Monomial_5> monoms;
+  PT_5::Monomial_representation mrepr;
+  mrepr(P, std::back_inserter(monoms));
 
   XYZ Result;
   Poly_2 A = PT_2::Shift()(Poly_2(1), 1, 0); // A
   Poly_2 B = PT_2::Shift()(Poly_2(1), 1, 1); // B
 
-  std::list<std::pair<CGAL::Exponent_vector, PT_5::Innermost_coefficient_type>>::iterator it_monoms;
+  std::list<Monomial_5>::iterator it_monoms;
   for(it_monoms = monoms.begin(); it_monoms != monoms.end(); it_monoms++) {
     CGAL::Exponent_vector allPowers = (*it_monoms).first;
     int coef = (*it_monoms).second;
     Expo3 powersXYZ = {allPowers[0], allPowers[1], allPowers[2]};
-    Poly_2 PAB = coef * CGAL::ipower(A, allPowers[3]) * CGAL::ipower(B, allPowers[4]);
+    Poly_2 PAB = 
+      coef * CGAL::ipower(A, allPowers[3]) * CGAL::ipower(B, allPowers[4]);
     if(Result.count(powersXYZ) == 0) {
       Result.emplace(powersXYZ, PAB);
     } else {
@@ -37,7 +41,10 @@ void test() {
   }
 
   for(const auto& [key, value] : Result) {
-    std::cout << "x^" << std::get<0>(key) << "y^" << std::get<1>(key) << "z^" << std::get<2>(key) << ": " << value << "\n";
+    std::cout << "x^" << std::get<0>(key) 
+              << "y^" << std::get<1>(key) 
+              << "z^" << std::get<2>(key) 
+              << ": " << value << "\n";
   }
 
   PT_5::Degree degree;

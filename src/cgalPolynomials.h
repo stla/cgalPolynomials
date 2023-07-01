@@ -16,6 +16,8 @@ typedef CGAL::Polynomial_traits_d<Poly_5>             PT_5;
 //typedef PT_5::Coefficient_type                        PT_4;  
 //typedef PT_5::Innermost_coefficient_type              Integer;
 
+typedef std::pair<CGAL::Exponent_vector, PT_5::Innermost_coefficient_type> Monomial_5;
+
 typedef CGAL::Polynomial_type_generator<int, 2>::Type Poly_2;
 typedef CGAL::Polynomial_traits_d<Poly_2>             PT_2;
 
