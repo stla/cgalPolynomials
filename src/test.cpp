@@ -1,6 +1,4 @@
-#ifndef __HEADER__
 #include "cgalPolynomials.h"
-#endif
 
 // [[Rcpp::export]]
 void test() {
