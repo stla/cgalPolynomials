@@ -1,7 +1,9 @@
 #include "cgalPolynomials.h"
 
 // [[Rcpp::export]]
-void test2(Rcpp::IntegerMatrix Powers, Rcpp::IntegerVector Coeffs) {
+Rcpp::CharacterMatrix test3(
+  Rcpp::IntegerMatrix Powers, Rcpp::IntegerVector Coeffs
+) {
 
   CGAL::IO::set_pretty_mode(std::cout);
   PT_5::Construct_polynomial construct_polynomial;
@@ -42,11 +44,19 @@ void test2(Rcpp::IntegerMatrix Powers, Rcpp::IntegerVector Coeffs) {
     }
   }
 
+  int nmonoms = Result.size();
+  Rcpp::CharacterMatrix POVRay(2, nmonoms);
+  int i = 0;
   for(const auto& [key, value] : Result) {
-    std::cout << "x^" << std::get<0>(key) 
-              << "y^" << std::get<1>(key) 
-              << "z^" << std::get<2>(key) 
-              << ": " << value << "\n";
+    std::string powers = "xyz(" + 
+      std::to_string(std::get<0>(key)) + ", " +
+      std::to_string(std::get<1>(key)) + ", " +
+      std::to_string(std::get<2>(key)) + ") :";
+    std::stringstream buffer;
+    buffer << value << "\n";
+    Rcpp::CharacterVector monom = {powers, buffer.str()};
+    POVRay(Rcpp::_, i++) = monom;
   }
 
+  return POVRay;
 }

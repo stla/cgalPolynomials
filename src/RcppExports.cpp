@@ -20,9 +20,34 @@ BEGIN_RCPP
     return R_NilValue;
 END_RCPP
 }
+// test2
+void test2(Rcpp::IntegerMatrix Powers, Rcpp::IntegerVector Coeffs);
+RcppExport SEXP _cgalPolynomials_test2(SEXP PowersSEXP, SEXP CoeffsSEXP) {
+BEGIN_RCPP
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::IntegerMatrix >::type Powers(PowersSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type Coeffs(CoeffsSEXP);
+    test2(Powers, Coeffs);
+    return R_NilValue;
+END_RCPP
+}
+// test3
+Rcpp::CharacterMatrix test3(Rcpp::IntegerMatrix Powers, Rcpp::IntegerVector Coeffs);
+RcppExport SEXP _cgalPolynomials_test3(SEXP PowersSEXP, SEXP CoeffsSEXP) {
+BEGIN_RCPP
+    Rcpp::RObject rcpp_result_gen;
+    Rcpp::RNGScope rcpp_rngScope_gen;
+    Rcpp::traits::input_parameter< Rcpp::IntegerMatrix >::type Powers(PowersSEXP);
+    Rcpp::traits::input_parameter< Rcpp::IntegerVector >::type Coeffs(CoeffsSEXP);
+    rcpp_result_gen = Rcpp::wrap(test3(Powers, Coeffs));
+    return rcpp_result_gen;
+END_RCPP
+}
 
 static const R_CallMethodDef CallEntries[] = {
     {"_cgalPolynomials_test", (DL_FUNC) &_cgalPolynomials_test, 0},
+    {"_cgalPolynomials_test2", (DL_FUNC) &_cgalPolynomials_test2, 2},
+    {"_cgalPolynomials_test3", (DL_FUNC) &_cgalPolynomials_test3, 2},
     {NULL, NULL, 0}
 };
 

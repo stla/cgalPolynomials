@@ -2,6 +2,14 @@
 # Generator token: 10BE3573-1514-4C36-9D1C-5A225CD40393
 
 test <- function() {
-    invisible(.Call('_cgalPolynomials_test', PACKAGE = 'cgalPolynomials'))
+    invisible(.Call(`_cgalPolynomials_test`))
+}
+
+test2 <- function(Powers, Coeffs) {
+    invisible(.Call(`_cgalPolynomials_test2`, Powers, Coeffs))
+}
+
+test3 <- function(Powers, Coeffs) {
+    .Call(`_cgalPolynomials_test3`, Powers, Coeffs)
 }
 
