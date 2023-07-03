@@ -14,5 +14,9 @@ Powers <- t(P[["index"]])
 pov <- cgalPolynomials:::test3(Powers, Coeffs)
 
 ab <- pov[, 2L]
+ab <- gsub("\n$", "", gsub("y", "b", gsub("x", "a", ab)))
+ab <- gsub("([ab])\\^(\\d+)", "pow(\\1,\\2)", x = ab)
 
+prcode <- paste0(pov[, 1L], ab)
 
+writeLines(prcode, "SMS2.txt")

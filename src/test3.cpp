@@ -50,10 +50,10 @@ Rcpp::StringMatrix test3(
     std::string powers = "xyz(" + 
       std::to_string(std::get<0>(key)) + ", " +
       std::to_string(std::get<1>(key)) + ", " +
-      std::to_string(std::get<2>(key)) + ") :";
+      std::to_string(std::get<2>(key)) + "): ";
     std::stringstream buffer;
     CGAL::IO::set_pretty_mode(buffer);
-    buffer << value << std::endl;
+    buffer << value << "," << std::endl;
     std::string coefab = buffer.str();
     Rcpp::StringVector monom = Rcpp::StringVector::create(powers, coefab);
     POVRay(Rcpp::_, i++) = monom;
