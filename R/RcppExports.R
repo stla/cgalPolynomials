@@ -13,3 +13,7 @@ test3 <- function(Powers, Coeffs) {
     .Call(`_cgalPolynomials_test3`, Powers, Coeffs)
 }
 
+test4 <- function(Powers, Coeffs) {
+    .Call(`_cgalPolynomials_test4`, Powers, Coeffs)
+}
+

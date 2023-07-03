@@ -21,7 +21,15 @@ typedef std::pair<CGAL::Exponent_vector, PT_5::Innermost_coefficient_type> Monom
 typedef CGAL::Polynomial_type_generator<int, 2>::Type Poly_2;
 typedef CGAL::Polynomial_traits_d<Poly_2>             PT_2;
 
+typedef CGAL::Polynomial_type_generator<double, 9>::Type Poly_9;
+typedef CGAL::Polynomial_traits_d<Poly_9>                PT_9;
+typedef std::pair<CGAL::Exponent_vector, PT_9::Innermost_coefficient_type> Monomial_9;
+
+typedef CGAL::Polynomial_type_generator<double, 6>::Type Poly_6;
+typedef CGAL::Polynomial_traits_d<Poly_6>                PT_6;
+
 typedef std::tuple<int, int, int> Expo3;
 typedef std::map<Expo3, Poly_2>   XYZ;
+typedef std::map<Expo3, Poly_6>   XYZ6;
 
 #endif
