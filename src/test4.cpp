@@ -26,12 +26,12 @@ Rcpp::StringMatrix test4(
   mrepr(P, std::back_inserter(monoms));
 
   XYZ6 Result;
-  Poly_6 w0 = PT_6::Shift()(Poly_6(1), 1, 0); // 
+  Poly_6 w0    = PT_6::Shift()(Poly_6(1), 1, 0); // 
   Poly_6 sqrt3 = PT_6::Shift()(Poly_6(1), 1, 1); // 
-  Poly_6 A = PT_6::Shift()(Poly_6(1), 1, 2); // a
-  Poly_6 B = PT_6::Shift()(Poly_6(1), 1, 3); // b
-  Poly_6 C = PT_6::Shift()(Poly_6(1), 1, 4); // c
-  Poly_6 D = PT_6::Shift()(Poly_6(1), 1, 5); // d
+  Poly_6 A     = PT_6::Shift()(Poly_6(1), 1, 2); // 
+  Poly_6 B     = PT_6::Shift()(Poly_6(1), 1, 3); // 
+  Poly_6 C     = PT_6::Shift()(Poly_6(1), 1, 4); // 
+  Poly_6 D     = PT_6::Shift()(Poly_6(1), 1, 5); // 
 
   std::list<Monomial_9>::iterator it_monoms;
   for(it_monoms = monoms.begin(); it_monoms != monoms.end(); it_monoms++) {
