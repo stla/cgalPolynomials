@@ -39,9 +39,12 @@ Rcpp::StringMatrix test4(
     double coef = (*it_monoms).second;
     Expo3 powersXYZ = {allPowers[0], allPowers[1], allPowers[2]};
     Poly_6 PAB = 
-      coef * CGAL::ipower(w0, allPowers[3]) * CGAL::ipower(sqrt3, allPowers[4]) * 
-      CGAL::ipower(A, allPowers[5]) * CGAL::ipower(B, allPowers[6]) * 
-      CGAL::ipower(C, allPowers[7]) * CGAL::ipower(D, allPowers[8]);
+      coef * CGAL::ipower(w0, allPowers[3]) * 
+      CGAL::ipower(sqrt3, allPowers[4]) * 
+      CGAL::ipower(A, allPowers[5]) * 
+      CGAL::ipower(B, allPowers[6]) * 
+      CGAL::ipower(C, allPowers[7]) * 
+      CGAL::ipower(D, allPowers[8]);
     if(Result.count(powersXYZ) == 0) {
       Result.emplace(powersXYZ, PAB);
     } else {

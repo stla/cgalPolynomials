@@ -31,7 +31,13 @@ Powers <- t(P[["index"]])
 pov <- cgalPolynomials:::test4(Powers, Coeffs)
 
 ab <- pov[, 2L]
-ab <- gsub("z", "d", gsub("y", "e", gsub("x", "f", gsub("w3", "a", gsub("\n$", "", gsub("w2", "b", gsub("w1", "c", ab, fixed = TRUE), fixed = TRUE), fixed = TRUE)))))
+ab <- gsub("z", "d",
+           gsub("y", "e",
+                gsub("x", "f",
+                     gsub("w3", "a",
+                          gsub("\n$", "",
+                               gsub("w2", "b",
+                                    gsub("w1", "c", ab)))))))
 ab <- gsub("([abcdef])\\^(\\d+)", "pow(\\1,\\2)", x = ab)
 
 prcode <- paste0(pov[, 1L], ab)
